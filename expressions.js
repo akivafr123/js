@@ -33,3 +33,16 @@ line2`;		// results in newline in string
 const multiline3 = 'Current temperature:\n' +
 `\t${currentTemp}\u00b0C\n` +
 "Don't worry...the heat is on!";
+
+// for...in loop loops over all the properties of an object
+var player = { name: 'Thomas', rank: 'Midshipman', age: 25 };
+for (var prop in player) {
+	if (!player.hasOwnProperty(prop)) continue;
+	console.log(prop + ': ' + player[prop]);
+}
+
+// for... of loop can be used on any object that is iterable, i.e arrays
+// the following loops over the contents of an array
+var arr = [1, 2, 3];
+for (var nu of arr)
+	console.log(nu);
